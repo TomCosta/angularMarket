@@ -4,9 +4,12 @@
   height: 120px;
   border: solid 0.2px;
   border-color: #888;
-  margin: 10px;
+  padding: 20px;
   align-items: center;
   text-align: center;
+}
+.prodSpace{
+  margin: 10px;
 }
 
 .textBold{

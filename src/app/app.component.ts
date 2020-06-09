@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,5 +19,12 @@ export class AppComponent {
     {nome: 'Caldo Verde', preco: '21,83', img: '../assets/img/food3.jpg'},
   ];
 
+  constructor(
+    private router: Router
+  ){    
+  }
 
+  goToUser() {
+    this.router.navigate(['user']);
+  }
 }
