@@ -11,11 +11,10 @@ export class CarrinhoComponent implements OnInit {
   prod;
 
   constructor(
-    route: ActivatedRoute
+    activatedRoute: ActivatedRoute
   ){
-    let prodParam = route.snapshot.params.prod;
-    this.prod = prodParam;
-    console.log('Params: ', this.prod);
+    this.prod = JSON.parse(activatedRoute.snapshot.paramMap.get('prod'));
+    console.log('Params: ', this.prod.nome);
   }
 
   ngOnInit(): void {
