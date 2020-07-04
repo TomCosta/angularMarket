@@ -1,19 +1,17 @@
-import { NgModule } from '@angular/core';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
+import { ShopComponent } from './shop/shop.component';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-  { 
-    path: '', 
-    redirectTo: '/', 
-    pathMatch: 'full' 
-  },
-  {
-    path: 'user',
-    component: UserComponent
-  }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'shop', component: ShopComponent},
+  { path: 'carrinho', component: CarrinhoComponent},
+  { path: 'user', component: UserComponent }
 ];
-// loadChildren: './user/user.component.module#UserComponentModule',
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

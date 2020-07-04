@@ -1,0 +1,25 @@
+
+.produtos {
+    width: 140px;
+    height: auto;
+    border: solid 0.2px;
+    border-color: #888;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+}
+
+.textBold{
+    font-weight: 900;
+    margin: 5px !important;
+}
+
+.imgSize{
+    width: 100px;
+    height: 60px;
+}
+
+.myColor{
+    color: white;
+    background-color: #17a2b8;
+}
