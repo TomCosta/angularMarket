@@ -1,6 +1,29 @@
-<p>No carrinho!</p>
-<div>
-    <p>
-        Produto: {{ prod.nome }}
-    </p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="produtos">
+                <img class="img-fluid imgSize" [src]="prod.img" />
+                <span class="textBold">{{ prod.nome }}</span>
+                <p>R$ {{ prod.preco }} </p>
+                <button type="button" class="btn btn-info" (click)="pagar()">Pagar</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-warning" (click)="addMenos()">-</button>
+                </div>
+                <div>
+                    Quantidade: {{ quant }}
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-success" (click)="addMais()">+</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                Total: {{ result }}
+            </div>
+        </div>
+    </div>
 </div>

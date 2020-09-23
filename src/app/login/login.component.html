@@ -12,3 +12,9 @@
         <button type="submit" class="btn btn-block btn-info" (click)="loginUser()">Entrar</button>
     </form>
 </div>
+<br>
+
+<h1>Pokemons</h1>
+<div *ngFor="let pok of pokeData">
+    {{ pok.game_index }} {{ pok.version.name }}
+</div>

@@ -1,3 +1,4 @@
+import { PokeapiService } from '../services/api/pokeapi.service';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,8 +11,10 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   signinForm: FormGroup;
+  pokeData:any = [];
 
   constructor(
+    private apiServ: PokeapiService,
     public fb: FormBuilder,
     public router: Router
   ){
@@ -19,15 +22,29 @@ export class LoginComponent implements OnInit {
       email: [''],
       password: ['']
     });
+
+    this.getPokeMon();
   }
 
-  ngOnInit(){    
+  ngOnInit(){
+    
   }
 
   loginUser() {
     console.log('Login ', this.signinForm.value);
     if(this.signinForm.value['password'] == '123456'){
       this.router.navigate(['shop']);
+    }else{
+      alert('Opss... Algo errado!');
     }
+  }
+
+  getPokeMon(){
+    let endpoint = 'pokemon/ditto';
+    this.apiServ.getPokemon(endpoint)
+    .subscribe((resp)=>{
+      this.pokeData = resp['game_indices'];
+      console.log('Pokedata: ', this.pokeData);
+    });
   }
 }

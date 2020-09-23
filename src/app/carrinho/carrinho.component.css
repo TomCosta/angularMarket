@@ -1,0 +1,112 @@
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+@media (min-width: 576px) {
+    .produtos {
+        width: 140px;
+        height: auto;
+        border: solid 0.2px;
+        border-color: #888;
+        align-items: center;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .textBold{
+        font-weight: 900;
+        margin: 5px !important;
+    }
+    
+    .imgSize{
+        width: 100px;
+        height: 60px;
+    }
+    
+    .myColor{
+        color: white;
+        background-color: #17a2b8;
+    }
+}
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+@media (min-width: 768px) {
+    .produtos {
+        width: 140px;
+        height: auto;
+        border: solid 0.2px;
+        border-color: #888;
+        align-items: center;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .textBold{
+        font-weight: 900;
+        margin: 5px !important;
+    }
+    
+    .imgSize{
+        width: 100px;
+        height: 60px;
+    }
+    
+    .myColor{
+        color: white;
+        background-color: #17a2b8;
+    }
+}
+
+/* Dispositivos large (desktops com 992px ou mais) */
+@media (min-width: 992px) {
+    .produtos {
+        width: 140px;
+        height: auto;
+        border: solid 0.2px;
+        border-color: #888;
+        align-items: center;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .textBold{
+        font-weight: 900;
+        margin: 5px !important;
+    }
+    
+    .imgSize{
+        width: 100px;
+        height: 60px;
+    }
+    
+    .myColor{
+        color: white;
+        background-color: #17a2b8;
+    }
+}
+
+/* Dispositivos extra large (desktops grandes com 1200px ou mais) */
+@media (min-width: 1200px) {
+    .produtos {
+        width: 140px;
+        height: auto;
+        border: solid 0.2px;
+        border-color: #888;
+        align-items: center;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .textBold{
+        font-weight: 900;
+        margin: 5px !important;
+    }
+    
+    .imgSize{
+        width: 100px;
+        height: 60px;
+    }
+    
+    .myColor{
+        color: white;
+        background-color: #17a2b8;
+    }
+}
