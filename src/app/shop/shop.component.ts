@@ -36,7 +36,7 @@ export class ShopComponent implements OnInit {
       img: '../assets/img/food1.jpg'
     }
 
-    this.addToCart(vianda);
+    // this.addToCart(vianda);
   }
 
   ngAfterViewInit(){

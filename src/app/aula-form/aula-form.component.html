@@ -1,0 +1,18 @@
+<form [formGroup]="buscaForm">
+    <div class="procurar">
+      <input type="text" placeholder="código do cliente" formControlName="codigoCliente"
+      (focus)="ofuscaCampo($event, 'codigoCliente')" (blur)="habilitarCampos()">
+      <button>Procurar</button>
+      <!-- [buscar]="'codigoCliente'" -->
+  
+      <input type="text" placeholder="número da operação" formControlName="numeroOperacao"
+      (focus)="ofuscaCampo($event, 'numeroOperacao')" (blur)="habilitarCampos()">
+      <button>Procurar</button>
+      <!-- [buscar]="'numeroOperacao'" -->
+  
+      <input type="text" placeholder="informações da conta" formControlName="infosConta"
+      (focus)="ofuscaCampo($event, 'infosConta')" (blur)="habilitarCampos()">
+      <button>Procurar</button>
+      <!--  [buscar]="'infosConta'" -->
+    </div>
+</form>

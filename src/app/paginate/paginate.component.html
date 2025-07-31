@@ -1,0 +1,18 @@
+<div>
+    <p>Estou na página: {{ paginaAtual }}</p>
+    <button (click)="paginaAnterior()" type="button">
+        Pagina anterior
+    </button>
+    <button (click)="pagina(paginaAtual + 1)" type="button">
+        Pagina {{ paginaAtual + 1 }}
+    </button>
+    <button (click)="pagina(paginaAtual + 2)" type="button">
+        Pagina {{ paginaAtual + 2 }}
+    </button>
+    <button (click)="pagina(paginaAtual + 3)" type="button">
+        Pagina {{ paginaAtual + 3 }}
+    </button>
+    <button (click)="proximaPagina()" type="button">
+        Proxima pagina
+    </button>
+</div> 

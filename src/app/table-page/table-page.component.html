@@ -1,0 +1,67 @@
+
+<div class="panel-body">
+    <h1>Pokemons</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pok of pokeData; let i=index;">
+                <td>{{i+1}}{{ pok?.game_index }}</td>
+                <td>{{ pok?.version?.name }}{{ pok?.name }}</td>
+                <td>{{ pok?.url }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="paging">
+    <div style="text-align:center">
+        <app-pagination *ngIf="pokeDataTotal.length>0"
+            [qtdPorPagina]="qtdPorPagina" 
+            [totalRegistros]="pokeDataTotal.length"
+            [qtdAdjacentes]="3"
+            (onPaginate)="paginar($event)">
+        </app-pagination>
+    </div>
+</div>
+
+<!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Paginação</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+            <tr *ngFor="let aluno of alunos">
+                <td>{{aluno.id}}</td>
+                <td>{{aluno.name}}</td>
+            </tr>
+        </table>
+      <app-pagination 
+          [qtdPorPagina]="qtdPorPagina" 
+          [totalRegistros]="alunosTotal.length"
+          [qtdAdjacentes]="3"
+          (onPaginate)="paginar($event)">
+      </app-pagination>
+    </div>
+  </div> -->
+
+  <!-- <app-paginate></app-paginate> -->
+  <!-- <div class="paging">
+    <div style="text-align:center">
+        <app-pagination
+            (clickPagina)="pagina($event)"
+            (clickPaginaAnterior)="paginaAnterior()"
+            (clickProximaPagina)="proximaPagina()"
+            [paginaAtual]="paginaAtual">
+        </app-pagination>
+    </div>
+</div> -->

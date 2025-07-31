@@ -46,5 +46,4 @@ export class CarrinhoComponent implements OnInit {
   pagar(){
     console.log('Pagar: ');
   }
-
 }

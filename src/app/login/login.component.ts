@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
       email: [''],
       password: ['']
     });
-
-    this.getPokeMon();
   }
 
   ngOnInit(){
@@ -37,14 +35,5 @@ export class LoginComponent implements OnInit {
     }else{
       alert('Opss... Algo errado!');
     }
-  }
-
-  getPokeMon(){
-    let endpoint = 'pokemon/ditto';
-    this.apiServ.getPokemon(endpoint)
-    .subscribe((resp)=>{
-      this.pokeData = resp['game_indices'];
-      console.log('Pokedata: ', this.pokeData);
-    });
   }
 }
